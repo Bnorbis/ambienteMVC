@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+</head>
+<body>
+<h1>Ambiente configurado</h1>
+
+<form action="/" method="get">
+  <label for="valor">Digite um número:</label>
+  <input type="number" id="valor" name="valor" required>
+  <button type="submit">Calcular</button>
+</form>
+
+<p th:if="${valor != null}">Você digitou: <span th:text="${valor}"></span></p>
+<p th:if="${fatorial != null}">O fatorial de <span th:text="${valor}"></span> é: <span th:text="${fatorial}"></span></p>
+
+</body>
+</html>
